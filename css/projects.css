@@ -1,0 +1,302 @@
+.projects {
+  color: var(--color-alternate-font);
+}
+
+.projects__container {
+  padding-top: 80px;
+  padding-bottom: 76px;
+}
+
+.projects__description {
+  position: relative;
+  z-index: 0;
+  width: 1080px;
+  max-width: 100%;
+  margin-bottom: 18px;
+}
+
+.projects__tip-btn {
+  -webkit-transform: translateY(3px);
+      -ms-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+.projects__tip-svg {
+  fill: transparent;
+}
+
+@media (min-width: 1024px) {
+  .projects__tip-btn:hover .projects__tip-svg {
+    fill: var(--color-light-violet);
+  }
+}
+
+.js-focus-visible .projects__tip-btn.focus-visible .projects__tip-svg {
+  fill: var(--color-light-violet);
+}
+
+.projects__tip-btn[aria-describedby*="tippy"] .svg-fill-fragment{
+  fill: var(--color-font);
+}
+
+.projects__tip-btn[aria-describedby*="tippy"] .projects__tip-svg {
+  fill: var(--color-hover);
+}
+
+.projects__link {
+  position: relative;
+  display: inline-block;
+  color: var(--color-hover);
+  letter-spacing: .3px;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: border-color .25s ease-in-out;
+  -o-transition: border-color .25s ease-in-out;
+  transition: border-color .25s ease-in-out;
+}
+
+.projects__link::after {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  background-color: transparent;
+  -webkit-transition: background-color .25s ease-in-out;
+  -o-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
+.js-focus-visible .projects__link.focus-visible {
+  color: var(--color-font);
+}
+
+.js-focus-visible .projects__link.focus-visible::after {
+  background-color: var(--color-hover);
+}
+
+@media (min-width: 1024px) {
+  .projects__link:hover {
+    border-color: var(--color-hover);
+  }
+}
+
+.projects__link:active {
+  color: var(--color-focus);
+  border-color: var(--color-focus);
+}
+
+.projects__lesser-heading {
+  margin-bottom: 23px;
+}
+
+/* tippy */
+.tippy-box {
+  padding: 5px 4px 4px 4px;
+  color: var(--color-font);
+  font: 600 12px/16px OpenSans;
+  border-radius: 0;
+  background-color: var(--color-hover);
+  -webkit-transform: translate(-1px, -3px);
+      -ms-transform: translate(-1px, -3px);
+          transform: translate(-1px, -3px);
+  text-align: center;
+}
+
+.tippy-box>.tippy-arrow::before {
+  color: var(--color-hover);
+}
+
+/* SWIPER */
+
+.projects__swiper-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.projects__swiper {
+  margin: 0 auto;
+  padding: 2px;
+  width: calc(100% - 145px);
+}
+
+.projects__swiper-btn {
+  position: absolute;
+  z-index: 5;
+  top: calc(50% + 5px);
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-light-gray);
+  border-radius: 50%;
+  -webkit-transition: background-color .25s ease-in-out;
+  -o-transition: background-color .25s ease-in-out;
+  transition: background-color .25s ease-in-out;
+}
+
+.projects__swiper-btn_next {
+  left: auto;
+  right: 0;
+}
+
+.projects__swiper-btn::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 7px / 2);
+  width: 7px;
+  height: 7px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: border-color .25s ease-in-out;
+  -o-transition: border-color .25s ease-in-out;
+  transition: border-color .25s ease-in-out;
+}
+
+.projects__swiper-btn_next::before {
+  left: calc(50% - 4px);
+  border-top: 1px solid var(--color-background);
+  border-right: 1px solid var(--color-background);
+}
+
+.projects__swiper-btn_prev::before {
+  left: calc(50% - 3px);
+  border-left: 1px solid var(--color-background);
+  border-bottom: 1px solid var(--color-background);
+}
+
+.projects-swiper__slide {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 150px;
+  border: 1px solid var(--color-gray);
+}
+
+.projects-swiper__img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: .5;
+  -webkit-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+
+/* эффекты состояний */
+
+.js-focus-visible .projects-swiper__slide.focus-visible {
+  border-color: var(--color-hover);
+}
+
+.projects-swiper__slide:active {
+  border-color: var(--color-hover);
+}
+
+.projects-swiper__slide:active .projects-swiper__img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  opacity: 1;
+}
+
+@media (min-width: 1024px) {
+  .projects-swiper__slide:hover .projects-swiper__img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    opacity: 1;
+  }
+}
+
+.js-focus-visible .projects__swiper-btn.focus-visible {
+  border: 2px solid var(--color-hover);
+}
+
+@media (min-width: 1024px) {
+  .projects__swiper-btn:hover {
+    background-color: var(--color-light-violet);
+  }
+}
+
+.projects__swiper-btn:active {
+  background-color: var(--color-light-violet);
+  border: 2px solid var(--color-hover);
+}
+
+/* БРЭЙКПОИНТЫ */
+
+/* 1200 */
+
+@media (max-width: 1200px) {
+
+  .projects__lesser-heading {
+    margin-bottom: 22px;
+  }
+
+  .projects__swiper {
+    width: calc(100% - 106px);
+  }
+
+  .projects-swiper__slide {
+    height: 128px;
+  }
+
+}
+
+/* 1023 */
+
+@media (max-width: 1023px) {
+
+  .projects__description {
+    margin-bottom: 24px;
+  }
+
+  .projects__lesser-heading {
+    margin-bottom: 27px;
+  }
+
+  .projects-swiper__slide {
+    height: 106px;
+  }
+}
+
+/* 580 ширина смартфона */
+@media (max-width: 580px) {
+
+  .projects__container {
+    padding-top: 50px;
+    padding-bottom: 30px;
+  }
+
+  .projects .section-heading {
+    margin-bottom: 13px;
+  }
+
+  .projects__description {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .projects__lesser-heading {
+    margin-bottom: 9px;
+  }
+
+.projects__swiper {
+    width: calc(100% - 95px);
+  }
+
+  .projects-swiper__slide {
+    height: 65px;
+  }
+}
