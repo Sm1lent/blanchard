@@ -36,3 +36,5 @@
 ### Контакты
 Форма с валидацией и карта с геометкой. 
 Использованы плагины just-validate, inputmask, yandex-maps
+
+#### Посмотреть на проект можно здесь: https://sm1lent.github.io/blanchard/
